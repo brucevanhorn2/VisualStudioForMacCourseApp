@@ -65,5 +65,29 @@ namespace CharacterLibrary
             Console.WriteLine("Charisma: " + Charisma);
         }
 
+        private void RecommendClass(){
+            if (Strength > 12) Console.WriteLine(CharacterName + " would make a good fighter.");
+
+            if(Intelligence > 12) {
+                Console.WriteLine(CharacterName + " would make a good mage.");
+            }
+
+            if(Wisdom >= 12){
+                Console.WriteLine(CharacterName + " would make a good cleric.");
+            } else {
+                Console.WriteLine(CharacterName + " would make a terrible clerid.");
+            }
+
+            if(Intelligence > 12 && Wisdom > 12){
+                Console.WriteLine(CharacterName + " would make a good Cleric / Mage!");
+            }
+
+            if(Wisdom >= 12 || Intelligence >= 12){
+                Console.WriteLine("This character should probably wield magic of some sort.");
+            }
+
+
+        }
+
     }
 }
