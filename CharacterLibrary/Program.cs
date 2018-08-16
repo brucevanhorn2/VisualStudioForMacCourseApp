@@ -6,7 +6,8 @@ namespace CharacterLibrary
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var newCharacter = new Character();
+            newCharacter.GenerateCharacter();
         }
     }
 }

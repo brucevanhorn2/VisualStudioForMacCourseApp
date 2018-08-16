@@ -13,6 +13,7 @@ namespace CharacterLibrary
         public int HitPoints { get; set; }
         public int ExperiencePoints { get; set; }
 
+        private Random rnd = new Random();
         private string[] RandomNames;
 
         public Character()
@@ -44,14 +45,12 @@ namespace CharacterLibrary
         }
 
         private string getRandomName(){
-            var rnd = new Random();
             var randomIndex = rnd.Next(0, RandomNames.Length);
             return RandomNames[randomIndex];
         }
 
         private int RollAttributeScore(){
             //roll three six sided dice to get the score
-            Random rnd = new Random();
             int score = rnd.Next(3, 18); // creates a number between 3 and 18
             return score;
         }
@@ -59,7 +58,7 @@ namespace CharacterLibrary
         private void PrintCharacter(){
             Console.WriteLine("Character Name: " + this.CharacterName);
             Console.WriteLine("Strength: " + Strength);
-            Console.WriteLine("Intelligence" + Intelligence);
+            Console.WriteLine("Intelligence: " + Intelligence);
             Console.WriteLine("Wisdom: " + Wisdom);
             Console.WriteLine("Dexterity: " + Dexterity);
             Console.WriteLine("Constitution: " + Constitution);
