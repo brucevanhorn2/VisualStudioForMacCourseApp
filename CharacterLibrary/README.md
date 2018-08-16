@@ -1,0 +1,1 @@
+﻿This project is used in the Visual Studio for Mac course.

@@ -39,6 +39,8 @@ namespace CharacterLibrary
             Dexterity = RollAttributeScore();
             Constitution = RollAttributeScore();
             Charisma = RollAttributeScore();
+
+            PrintCharacter();
         }
 
         private string getRandomName(){
@@ -52,6 +54,16 @@ namespace CharacterLibrary
             Random rnd = new Random();
             int score = rnd.Next(3, 18); // creates a number between 3 and 18
             return score;
+        }
+
+        private void PrintCharacter(){
+            Console.WriteLine("Character Name: " + this.CharacterName);
+            Console.WriteLine("Strength: " + Strength);
+            Console.WriteLine("Intelligence" + Intelligence);
+            Console.WriteLine("Wisdom: " + Wisdom);
+            Console.WriteLine("Dexterity: " + Dexterity);
+            Console.WriteLine("Constitution: " + Constitution);
+            Console.WriteLine("Charisma: " + Charisma);
         }
 
     }
